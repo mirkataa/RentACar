@@ -2,7 +2,7 @@ using Data;
 using Data.Model;
 
 /// <summary>
-/// Business Namespace
+/// CustomersBusiness Namespace
 /// </summary>
 namespace Business
 {
@@ -11,67 +11,67 @@ namespace Business
         private Context context { get; set; }
 
         /// <summary>
-        /// Get all cars from the database
+        /// Get all customers from the database
         /// </summary>
-        public List<Car> GetAll()
+        public List<Customer> GetAll()
         {
-            using (carContext = new Context())
+            using (context = new Context())
             {
                 return context.Cars.ToList();
             }
         }
 
         /// <summary>
-        /// Get single cars from the database by Id
+        /// Get single customer from the database by Id
         /// </summary>
-        public Car Get(int id)
+        public Customer Get(int id)
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                return carContext.Cars.Find(id);
+                return context.Customers.Find(id);
             }
         }
 
         /// <summary>
-        /// Add a car to the database
+        /// Add a customer to the database
         /// </summary>
-        public void AddCar(Product car)
+        public void Add(Customer customer)
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                carContext.Cars.Add(car);
-                carContext.SaveChanges();
+                context.Customers.Add(customer);
+                context.SaveChanges();
             }
         }
 
         /// <summary>
-        /// Update a single car in the database by Id.
+        /// Update a single customer in the database by Id.
         /// </summary>
-        public void UpdateCar(Product car)
+        public void Update(Customer customer)
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                var item = carContext.Cars.Find(car.Id);
+                var item = context.Customers.Find(customer.Id);
                 if (item != null)
                 {
-                    carContext.Entry(item).CurrentValues.SetValues(car);
-                    carContext.SaveChanges();
+                    context.Entry(item).CurrentValues.SetValues(customer);
+                    context.SaveChanges();
                 }
             }
         }
 
         /// <summary>
-        /// Deleate a car from the database by Id
+        /// Deleate a customer from the database by Id
         /// </summary>
-        public void DeleteCar(int id)
+        public void Delete(int id)
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                var car = carContext.Cars.Find(id);
-                if (car != null)
+                var customer = context.Customers.Find(id);
+                if (customer != null)
                 {
-                    carContext.Cars.Remove(car);
-                    carContext.SaveChanges();
+                    context.Customers.Remove(customer);
+                    context.SaveChanges();
                 }
             }
         }
