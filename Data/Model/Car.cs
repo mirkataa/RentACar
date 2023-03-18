@@ -5,7 +5,7 @@ namespace Data.Model
     {
 
         public int Id { get; set; }
-        public string RegNo { get; set; }
+        public string RgNum { get; set; }
         public int Km { get; set; }
         
     }
