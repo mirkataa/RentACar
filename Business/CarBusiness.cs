@@ -2,60 +2,60 @@ using Data;
 using Data.Model;
 
 /// <summary>
-/// Business Namespace
+/// CarBusiness Namespace
 /// </summary>
 namespace Business
 {
     public class CarBusiness
     {
-        private CarContext carContext { get; set; }
+        private Context context { get; set; }
 
         /// <summary>
         /// Get all cars from the database
         /// </summary>
-        public List<Car> GetAllCars()
+        public List<Car> GetAll()
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                return carContext.Cars.ToList();
+                return context.Cars.ToList();
             }
         }
 
         /// <summary>
         /// Get single cars from the database by Id
         /// </summary>
-        public Car GetCar(int id)
+        public Car Get(int id)
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                return carContext.Cars.Find(id);
+                return context.Cars.Find(id);
             }
         }
 
         /// <summary>
         /// Add a car to the database
         /// </summary>
-        public void AddCar(Product car)
+        public void Add(Product car)
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                carContext.Cars.Add(car);
-                carContext.SaveChanges();
+                context.Cars.Add(car);
+                context.SaveChanges();
             }
         }
 
         /// <summary>
         /// Update a single car in the database by Id.
         /// </summary>
-        public void UpdateCar(Product car)
+        public void Update(Product car)
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                var item = carContext.Cars.Find(car.Id);
+                var item = context.Cars.Find(car.Id);
                 if (item != null)
                 {
-                    carContext.Entry(item).CurrentValues.SetValues(car);
-                    carContext.SaveChanges();
+                    context.Entry(item).CurrentValues.SetValues(car);
+                    context.SaveChanges();
                 }
             }
         }
@@ -63,15 +63,15 @@ namespace Business
         /// <summary>
         /// Deleate a car from the database by Id
         /// </summary>
-        public void DeleteCar(int id)
+        public void Delete(int id)
         {
-            using (carContext = new CarContext())
+            using (context = new Context())
             {
-                var car = carContext.Cars.Find(id);
+                var car = context.Cars.Find(id);
                 if (car != null)
                 {
-                    carContext.Cars.Remove(car);
-                    carContext.SaveChanges();
+                    context.Cars.Remove(car);
+                    context.SaveChanges();
                 }
             }
         }
