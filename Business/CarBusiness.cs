@@ -35,7 +35,7 @@ namespace Business
         /// <summary>
         /// Add a car to the database
         /// </summary>
-        public void Add(Product car)
+        public void Add(Car car)
         {
             using (context = new Context())
             {
@@ -47,7 +47,7 @@ namespace Business
         /// <summary>
         /// Update a single car in the database by Id.
         /// </summary>
-        public void Update(Product car)
+        public void Update(Car car)
         {
             using (context = new Context())
             {
