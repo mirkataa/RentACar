@@ -14,7 +14,7 @@ namespace Business
         private Context context { get; set; }
 
         /// <summary>
-        /// Връща вси1ки коли от базата данни
+        /// Връща всики коли от базата данни
         /// </summary>
         public List<Car> GetAll()
         {
