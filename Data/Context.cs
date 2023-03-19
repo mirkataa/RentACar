@@ -7,36 +7,36 @@ using Microsoft.EntityFrameworkCore;
 namespace Data
 {
     /// <summary>
-    /// ProductContext
+    /// Публичен клас контекст, наследяващ
     /// </summary>
     public class Context : DbContext
     {
         /// <summary>
-        /// Connection String
+        ///Настройка за връзка към базата данни
         /// </summary> 
         private const string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=RentACar;Integrated Security=True;";
 
         /// <summary>
-        /// Cars
+        /// DbContext свойство на класа от данни за колите
         /// </summary>
         public DbSet<Car> Cars { get; set; }
 
         /// <summary>
-        /// Customers
+        /// DbContext свойство на класа от данни за клиентите
         /// </summary>
         public DbSet<Customer> Customers { get; set; }
 
         /// <summary>
-        /// Constructor
+        /// Публичен конструктор на класа
         /// </summary>
         public Context()
         {
-            // Create the database automaticly
+            // Автоматично създаване на базата данни
             Database.EnsureCreated();
         }
 
         /// <summary>
-        /// Connection string to Microsoft SQL Server
+        /// Свързване към Microsoft SQL Server
         /// </summary> 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
