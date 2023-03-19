@@ -61,7 +61,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Deleate a customer from the database by Id
+        /// Delete a customer from the database by Id
         /// </summary>
         public void Delete(int id)
         {
