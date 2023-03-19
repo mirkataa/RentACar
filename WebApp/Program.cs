@@ -3,6 +3,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+// Add service to Database Context
+builder.Services.AddDbContext<Data.Context>();
 
 
 var app = builder.Build();
