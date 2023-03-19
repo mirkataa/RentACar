@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/// <summary>
+/// Пронстранство от имена на базата данни
+/// </summary>
 namespace Data.Model
 {
     public class Customer

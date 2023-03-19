@@ -1,4 +1,6 @@
-﻿
+﻿/// <summary>
+/// Пронстранство от имена на базата данни
+/// </summary>
 namespace Data.Model
 {
     public class Car
