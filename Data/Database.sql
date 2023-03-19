@@ -20,3 +20,6 @@ CREATE TABLE [Customers]
 	[From] DATETIME,
 	[To] DATETIME,
 );
+
+SELECT * 
+FROM [Customers];

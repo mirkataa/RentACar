@@ -3261,23 +3261,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mirena\\.nuget\\packages\\": {},
+    "C:\\Users\\SAVA\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mirena\\Desktop\\RentACar\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\SAVA\\Desktop\\RentACar\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\Mirena\\Desktop\\RentACar\\WebApp\\WebApp.csproj",
-      "packagesPath": "C:\\Users\\Mirena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mirena\\Desktop\\RentACar\\WebApp\\obj\\",
+      "projectPath": "C:\\Users\\SAVA\\Desktop\\RentACar\\WebApp\\WebApp.csproj",
+      "packagesPath": "C:\\Users\\SAVA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SAVA\\Desktop\\RentACar\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mirena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SAVA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3286,18 +3286,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Mirena\\Desktop\\RentACar\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\Mirena\\Desktop\\RentACar\\Business\\Business.csproj"
+            "C:\\Users\\SAVA\\Desktop\\RentACar\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\SAVA\\Desktop\\RentACar\\Business\\Business.csproj"
             },
-            "C:\\Users\\Mirena\\Desktop\\RentACar\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\Mirena\\Desktop\\RentACar\\Data\\Data.csproj"
+            "C:\\Users\\SAVA\\Desktop\\RentACar\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\SAVA\\Desktop\\RentACar\\Data\\Data.csproj"
             }
           }
         }
@@ -3330,7 +3329,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

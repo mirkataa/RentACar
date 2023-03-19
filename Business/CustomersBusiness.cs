@@ -17,7 +17,7 @@ namespace Business
         {
             using (context = new Context())
             {
-                return context.Cars.ToList();
+                return context.Customers.ToList();
             }
         }
 
