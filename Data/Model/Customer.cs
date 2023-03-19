@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 /// </summary>
 namespace Data.Model
 {
+    /// <summary>
+    /// Публичен клас на базата данни за клиенти
+    /// </summary>
     public class Customer
     {
         /// <summary>

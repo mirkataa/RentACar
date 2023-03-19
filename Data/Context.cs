@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 /// <summary>
-/// Data Namespace
+/// Пронстранство от имена на базата данни
 /// </summary>
 namespace Data
 {

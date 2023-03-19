@@ -3,6 +3,9 @@
 /// </summary>
 namespace Data.Model
 {
+    /// <summary>
+    /// Публичен клас на базата данни за коли
+    /// </summary>
     public class Car
     {
         /// <summary>
