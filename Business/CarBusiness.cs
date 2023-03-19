@@ -2,19 +2,19 @@ using Data;
 using Data.Model;
 
 /// <summary>
-/// Простраснство с имена на бинес логиката
+/// Пронстранство от имена на бизнес логиката
 /// </summary>
 namespace Business
 {
     /// <summary>
-    /// Публичен клас а бизнес логиката за коли
+    /// Публичен клас на бизнес логиката за коли
     /// </summary>
     public class CarBusiness
     {
         private Context context { get; set; }
 
         /// <summary>
-        /// Връща всики коли от базата данни
+        /// Връща всички коли от базата данни
         /// </summary>
         public List<Car> GetAll()
         {
@@ -36,7 +36,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Добавяне на кола кум базта данни
+        /// Добавяне на кола към базата данни
         /// </summary>
         public void Add(Car car)
         {
@@ -48,7 +48,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Актуализаци на кола кум базта данни
+        /// Актуализация на кола към базата данни
         /// </summary>
         public void Update(Car car)
         {
@@ -64,7 +64,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Изтриване на кола кум базта данни
+        /// Изтриване на кола от базата данни
         /// </summary>
         public void Delete(int id)
         {
