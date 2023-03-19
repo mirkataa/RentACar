@@ -2,16 +2,19 @@ using Data;
 using Data.Model;
 
 /// <summary>
-/// Пронстранство от имена на бинес логиката
+/// Пронстранство от имена на бизнес логиката
 /// </summary>
 namespace Business
 {
+    /// <summary>
+    /// Публичен клас на бизнес логиката за клиенти
+    /// </summary>
     public class CustomersBusiness
     {
         private Context context { get; set; }
 
         /// <summary>
-        /// Get all customers from the database
+        /// Връща всички клиенти от базата данни
         /// </summary>
         public List<Customer> GetAll()
         {
@@ -22,7 +25,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Get single customer from the database by Id
+        /// Връща един клиент от базата данни по идентификационно поле 
         /// </summary>
         public Customer Get(int id)
         {
@@ -33,7 +36,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Add a customer to the database
+        /// Добавяне на клиент към базата данни
         /// </summary>
         public void Add(Customer customer)
         {
@@ -45,7 +48,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Update a single customer in the database by Id.
+        /// Актуализация на клиент към базата данни
         /// </summary>
         public void Update(Customer customer)
         {
@@ -61,7 +64,7 @@ namespace Business
         }
 
         /// <summary>
-        /// Delete a customer from the database by Id
+        /// Изтриване на клиент от базата данни
         /// </summary>
         public void Delete(int id)
         {
