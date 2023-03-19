@@ -2,7 +2,7 @@ using Data;
 using Data.Model;
 
 /// <summary>
-/// ѕронстранство от имена на бинес логиката
+/// ѕронстранство от имена на бизнес логиката
 /// </summary>
 namespace Business
 {
