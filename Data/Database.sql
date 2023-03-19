@@ -15,8 +15,9 @@ CREATE TABLE [Customers]
 	[LastName] VARCHAR(50) NOT NULL, 
 	[Phone] INT,
 	[Email] VARCHAR(50),
-	[CarId] INT,
-	CONSTRAINT [fk_customers_id_car] FOREIGN KEY([CarId]) REFERENCES [Cars]([Id]),
+	[Car] INT,
+	CONSTRAINT [fk_customers_id_car] FOREIGN KEY([Car]) REFERENCES [Cars]([Id]),
 	[From] DATETIME,
 	[To] DATETIME,
 );
+
