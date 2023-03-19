@@ -14,35 +14,35 @@ namespace Data.Model
     public class Customer
     {
         /// <summary>
-        /// Идентификационен номер на клиента
+        /// Публично поле, отразяващо идентификацинния номер на клиента
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// Име на клиента
+        /// Публично поле, отразяващо името на клиента
         /// </summary>
         public string FirstName { get; set; }
         /// <summary>
-        /// Фамилия на клиента
+        /// Публично поле, отразяващо фамилията на клиента
         /// </summary>
         public string LastName { get; set; }
         /// <summary>
-        /// Имейл адрес на клиента
+        /// Публично поле, отразяващо имейл адреса на клиента
         /// </summary>
         public string Email { get; set; }
         /// <summary>
-        /// Телефонен номер на клиента
+        /// Публично поле, отразяващо телефоння номер на клиента
         /// </summary>
         public string Phone { get; set; }
         /// <summary>
-        /// Наета кола от клиента
+        /// Публично поле, отразяващо коя кола е наета от клиента
         /// </summary>
         public int Car { get; set; }
         /// <summary>
-        /// Начален час, в който колата е наета
+        /// Публично поле, отразяващо началния час, в който колата е наета
         /// </summary>
         public DateTime From { get; set; }
         /// <summary>
-        /// Краен час, до който колата може да се ползва
+        /// Публично поле, отразяващо крайния час, до който колата може да се ползва
         /// </summary>
         public DateTime To { get; set; }
 
