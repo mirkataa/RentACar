@@ -20,19 +20,19 @@ namespace Data.Model
         /// <summary>
         /// Публично поле, отразяващо името на клиента
         /// </summary>
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
         /// <summary>
         /// Публично поле, отразяващо фамилията на клиента
         /// </summary>
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
         /// <summary>
         /// Публично поле, отразяващо имейл адреса на клиента
         /// </summary>
-        public string Email { get; set; }
+        public string? Email { get; set; }
         /// <summary>
         /// Публично поле, отразяващо телефоння номер на клиента
         /// </summary>
-        public string Phone { get; set; }
+        public int Phone { get; set; }
         /// <summary>
         /// Публично поле, отразяващо коя кола е наета от клиента
         /// </summary>
