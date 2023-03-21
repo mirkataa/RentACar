@@ -12,6 +12,12 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Brand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Brand)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Car.RgNum)
         </dt>
         <dd class="col-sm-10">
@@ -22,6 +28,12 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Car.Km)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.IsRented)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.IsRented)
         </dd>
     </dl>
 </div>
