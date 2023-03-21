@@ -4,8 +4,10 @@
 CREATE TABLE [Cars] 
 (
 	[Id] INT IDENTITY PRIMARY KEY NOT NULL, 
+	[Brand] VARCHAR(50) NOT NULL,
 	[RgNum] VARCHAR(50) NOT NULL, 
-	[Km] INT
+	[Km] INT,
+	[Rented] BIT NOT NULL
 );
 
 CREATE TABLE [Customers] 

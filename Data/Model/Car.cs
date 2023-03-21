@@ -12,6 +12,8 @@ namespace Data.Model
         /// Публично поле, отразяващо идентификационния номер на колата
         /// </summary>
         public int Id { get; set; }
+
+        public string Brand { get; set; }
         /// <summary>
         /// Публично поле, отразяващо регистрационния номер на колата
         /// </summary>
@@ -20,6 +22,8 @@ namespace Data.Model
         /// публично поле, отразяващо броя изминати километри от колата
         /// </summary>
         public int Km { get; set; }
-        
+
+        public bool IsRented { get; set; }
+
     }
 }
