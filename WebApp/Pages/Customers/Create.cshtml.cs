@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Data;
 using Data.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApp.Pages.Customers
 {
@@ -19,8 +20,12 @@ namespace WebApp.Pages.Customers
             _context = context;
         }
 
-        public IActionResult OnGet()
+        public List<Car> Cars { get; set; } = new List<Car>();
+
+        public async Task<IActionResult> OnGetAsync()
         {
+            Cars = await _context.Cars.ToListAsync();
+
             return Page();
         }
 
