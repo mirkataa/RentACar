@@ -28,5 +28,9 @@ namespace WebApp.Pages.Customers
                 Customer = await _context.Customers.ToListAsync();
             }
         }
+        public async Task<Car> GetCarAsync(int id)
+        {
+            return await _context.Cars.FindAsync(id);
+        }
     }
 }

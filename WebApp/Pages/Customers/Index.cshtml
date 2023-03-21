@@ -52,9 +52,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Phone)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Car)
-            </td>
+                <td>
+                    @{
+                        // Retrieve the Car object associated with the current customer's Car foreign key
+                        var car = await Model.GetCarAsync(item.Car);
+
+                        // Display the Car Registration number instead of its Id
+                        @car.RgNum  
+                    }
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.From)
             </td>
