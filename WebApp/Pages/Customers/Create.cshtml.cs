@@ -24,7 +24,8 @@ namespace WebApp.Pages.Customers
 
         public async Task<IActionResult> OnGetAsync()
         {
-            Cars = await _context.Cars.ToListAsync();
+            
+            Cars = await _context.Cars.Where(c => c.IsRented == false).ToListAsync();
 
             return Page();
         }
@@ -40,6 +41,17 @@ namespace WebApp.Pages.Customers
             {
                 return Page();
             }
+
+            // Find the car that the customer selected
+            var selectedCar = await _context.Cars.FindAsync(Customer.Car);
+
+            if (selectedCar == null)
+            {
+                return Page();
+            }
+
+            // Update the IsRented property of the selected car to true
+            selectedCar.IsRented = true;
 
             _context.Customers.Add(Customer);
             await _context.SaveChangesAsync();
