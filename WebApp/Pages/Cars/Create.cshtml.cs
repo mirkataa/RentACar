@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Data;
 using Data.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApp.Pages.Cars
 {
@@ -33,6 +34,15 @@ namespace WebApp.Pages.Cars
         {
           if (!ModelState.IsValid || _context.Cars == null || Car == null)
             {
+                return Page();
+            }
+
+            // Check if the entered registration number already exists in the Cars table
+            bool rgNumExists = await _context.Cars.AnyAsync(c => c.RgNum == Car.RgNum);
+
+            if (rgNumExists)
+            {
+                ModelState.AddModelError("Car.RgNum", "Въведеният регистрационен номер вече съществува!");
                 return Page();
             }
 
