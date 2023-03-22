@@ -15,7 +15,7 @@ CREATE TABLE [Customers]
 	[Id] INT IDENTITY PRIMARY KEY NOT NULL, 
 	[FirstName] VARCHAR(50) NOT NULL,
 	[LastName] VARCHAR(50) NOT NULL, 
-	[Phone] INT,
+	[Phone] VARCHAR(50),
 	[Email] VARCHAR(50),
 	[Car] INT,
 	CONSTRAINT [fk_customers_id_car] FOREIGN KEY([Car]) REFERENCES [Cars]([Id]),

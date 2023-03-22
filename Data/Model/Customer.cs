@@ -32,7 +32,7 @@ namespace Data.Model
         /// <summary>
         /// Публично поле, отразяващо телефоння номер на клиента
         /// </summary>
-        public int Phone { get; set; }
+        public string? Phone { get; set; }
         /// <summary>
         /// Публично поле, отразяващо коя кола е наета от клиента
         /// </summary>
