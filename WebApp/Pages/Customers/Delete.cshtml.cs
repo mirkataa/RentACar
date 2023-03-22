@@ -52,6 +52,14 @@ namespace WebApp.Pages.Customers
 
             if (customer != null)
             {
+                // Get the car associated with the deleted customer
+                var car = await _context.Cars.FindAsync(customer.Car);
+
+                if (car != null)
+                {
+                    car.IsRented = false;
+                }
+
                 Customer = customer;
                 _context.Customers.Remove(Customer);
                 await _context.SaveChangesAsync();
