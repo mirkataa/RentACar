@@ -11,6 +11,14 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
+         @if (Model.Car.IsRented)
+        {
+            <div class="alert alert-danger">
+                Тази кола в момента е наета и не може да бъде редактирана.
+            </div>
+        }
+        else
+        {
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Car.Id" />
@@ -33,6 +41,7 @@
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
+        }
     </div>
 </div>
 
