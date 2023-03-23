@@ -11,14 +11,6 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-         @if (Model.Car.IsRented)
-        {
-            <div class="alert alert-danger">
-                Тази кола в момента е наета и не може да бъде редактирана.
-            </div>
-        }
-        else
-        {
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Car.Id" />
@@ -38,10 +30,27 @@
                 <span asp-validation-for="Car.Km" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Car.IsRented"></label>
+                <div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="Car.IsRented" value="true" checked>
+                        <label class="form-check-label" for="Car_IsRented">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="Car.IsRented" value="false">
+                        <label class="form-check-label" for="Car_IsRented">
+                            No
+                        </label>
+                    </div>
+                </div>
+                <span asp-validation-for="Car.IsRented" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
-        }
     </div>
 </div>
 
