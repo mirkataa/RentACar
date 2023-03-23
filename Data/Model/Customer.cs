@@ -25,14 +25,14 @@ namespace Data.Model
         /// </summary>
         [DisplayName("Име")]
         [Required(ErrorMessage = "Име е задължително поле!")]
-        public string? FirstName { get; set; }
+        public string FirstName { get; set; }
 
         /// <summary>
         /// Публично поле, отразяващо фамилията на клиента
         /// </summary>
         [DisplayName("Фамилия")]
         [Required(ErrorMessage = "Фамилия е задължително поле!")]
-        public string? LastName { get; set; }
+        public string LastName { get; set; }
 
         /// <summary>
         /// Публично поле, отразяващо имейл адреса на клиента
@@ -40,7 +40,7 @@ namespace Data.Model
         [DisplayName("Имейл адрес")]
         [Required(ErrorMessage = "Имейл адрес е задължително поле!")]
         [EmailAddress(ErrorMessage = "Невалиден имейл адрес!")]
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         /// <summary>
         /// Публично поле, отразяващо телефоння номер на клиента
@@ -48,7 +48,7 @@ namespace Data.Model
         [DisplayName("Телефонен номер")]
         [Required(ErrorMessage = "Телефонен номер е задължително поле!")]
         [Phone(ErrorMessage = "Невалиден телефонен номер!")]
-        public string? Phone { get; set; }
+        public string Phone { get; set; }
 
         /// <summary>
         /// Публично поле, отразяващо коя кола е наета от клиента

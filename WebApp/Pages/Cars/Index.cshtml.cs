@@ -26,6 +26,15 @@ namespace WebApp.Pages.Cars
             if (_context.Cars != null)
             {
                 Car = await _context.Cars.ToListAsync();
+                foreach (var car in Car)
+                {
+                    var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Car == car.Id);
+                    if (customer != null && customer.To <= DateTime.Now)
+                    {
+                        car.IsRented = false;
+                        await _context.SaveChangesAsync();
+                    }
+                }
             }
         }
     }
