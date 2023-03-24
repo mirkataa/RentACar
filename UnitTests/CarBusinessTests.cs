@@ -5,6 +5,9 @@ using Newtonsoft.Json;
 using System;
 namespace UnitTests
 {
+    /// <summary>
+    /// NUnit тестове за методите в CarBusiness
+    /// </summary>
     public class CarBusinessTests
     {
         private Context context;
@@ -144,7 +147,6 @@ namespace UnitTests
         [OneTimeTearDown]
         public void TearDown()
         {
-            // Clean up the database
             context.Dispose();
         }
     }
