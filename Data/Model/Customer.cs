@@ -71,6 +71,26 @@ namespace Data.Model
         [Required(ErrorMessage = "Дата и час на предаване е задължително поле!")]
         public DateTime To { get; set; }
 
+        /// <summary>
+        /// Преправяме метода да сравнява стойностите на пропъртитата на два обекта Customer вместо техните референции
+        /// </summary>
+        /// <returns>Ако всички пропъртита имат еднакви стойности, връща true, в противен случай връща false.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
 
+            var other = (Customer)obj;
+
+            return FirstName == other.FirstName &&
+                   LastName == other.LastName &&
+                   Email == other.Email &&
+                   Phone == other.Phone &&
+                   Car == other.Car &&
+                   From == other.From &&
+                   To == other.To;
+        }
     }
 }
