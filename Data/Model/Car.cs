@@ -34,6 +34,7 @@ namespace Data.Model
         /// </summary>
         [DisplayName("Изминати километри")]
         [Required(ErrorMessage = "Изминати километри е задължително поле!")]
+        [Range(0, int.MaxValue, ErrorMessage = "Въведете коректни данни!")]
         public int Km { get; set; }
 
         /// <summary>
