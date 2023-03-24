@@ -11,7 +11,7 @@ namespace UnitTests
         private CarBusiness carBusiness;
 
         /// <summary>
-        /// Инициализираме контекста и car business обекта 
+        /// РРЅРёС†РёР°Р»РёР·РёСЂР°РјРµ РєРѕРЅС‚РµРєСЃС‚Р° Рё car business РѕР±РµРєС‚Р°
         /// </summary>
         [OneTimeSetUp]
         public void Setup()
@@ -21,7 +21,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Тест проверяващ дали методът GetAll връща всички коли от базата данни
+        /// РўРµСЃС‚ РїСЂРѕРІРµСЂСЏРІР°С‰ РґР°Р»Рё РјРµС‚РѕРґСЉС‚ GetAll РІСЂСЉС‰Р° РІСЃРёС‡РєРё РєРѕР»Рё РѕС‚ Р±Р°Р·Р°С‚Р° РґР°РЅРЅРё
         /// </summary>
         [Test]
         public void GetAll_ReturnsAllCars()
@@ -37,7 +37,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Тест проверяващ дали методът Get връща правилната кола от базата данни
+        /// РўРµСЃС‚ РїСЂРѕРІРµСЂСЏРІР°С‰ РґР°Р»Рё РјРµС‚РѕРґСЉС‚ Get РІСЂСЉС‰Р° РїСЂР°РІРёР»РЅР°С‚Р° РєРѕР»Р° РѕС‚ Р±Р°Р·Р°С‚Р° РґР°РЅРЅРё
         /// </summary>
         [Test]
         public void Get_ReturnsCorrectCar()
@@ -60,7 +60,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Тест проверяващ дали методът Add добавя коли в базата данни
+        /// РўРµСЃС‚ РїСЂРѕРІРµСЂСЏРІР°С‰ РґР°Р»Рё РјРµС‚РѕРґСЉС‚ Add РґРѕР±Р°РІСЏ РєРѕР»Рё РІ Р±Р°Р·Р°С‚Р° РґР°РЅРЅРё
         /// </summary>
         [Test]
         public void Add_AddsNewCarToDatabase()
@@ -84,7 +84,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Тест проверяващ дали методът Update обновява правилно инфорамацията на дадена кола от базата данни
+        /// РўРµСЃС‚ РїСЂРѕРІРµСЂСЏРІР°С‰ РґР°Р»Рё РјРµС‚РѕРґСЉС‚ Update РѕР±РЅРѕРІСЏРІР° РїСЂР°РІРёР»РЅРѕ РёРЅС„РѕСЂР°РјР°С†РёСЏС‚Р° РЅР° РґР°РґРµРЅР° РєРѕР»Р° РѕС‚ Р±Р°Р·Р°С‚Р° РґР°РЅРЅРё
         /// </summary>
         [Test]
         public void Update_UpdatesCarInDatabase()
@@ -117,7 +117,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Тест проверяващ дали методът Delete премахва дадена кола от базата данни
+        /// РўРµСЃС‚ РїСЂРѕРІРµСЂСЏРІР°С‰ РґР°Р»Рё РјРµС‚РѕРґСЉС‚ Delete РїСЂРµРјР°С…РІР° РґР°РґРµРЅР° РєРѕР»Р° РѕС‚ Р±Р°Р·Р°С‚Р° РґР°РЅРЅРё
         /// </summary>
         [Test]
         public void Delete_DeletesCarFromDatabase()
@@ -139,7 +139,7 @@ namespace UnitTests
         }
 
         /// <summary>
-        /// Почистваме базата данни
+        /// РџРѕС‡РёСЃС‚РІР°РјРµ Р±Р°Р·Р°С‚Р° РґР°РЅРЅРё
         /// </summary>
         [OneTimeTearDown]
         public void TearDown()
