@@ -23,6 +23,8 @@ namespace WebApp.Pages.Customers
         [BindProperty]
         public Customer Customer { get; set; } = default!;
 
+        public List<Car> Cars { get; set; } = new List<Car>();
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null || _context.Customers == null)
@@ -31,6 +33,7 @@ namespace WebApp.Pages.Customers
             }
 
             var customer =  await _context.Customers.FirstOrDefaultAsync(m => m.Id == id);
+            Cars = await _context.Cars.Where(c => c.IsRented == false || c.Id == customer.Car).ToListAsync();
             if (customer == null)
             {
                 return NotFound();
@@ -47,6 +50,16 @@ namespace WebApp.Pages.Customers
             {
                 return Page();
             }
+
+            var selectedCar = await _context.Cars.FindAsync(Customer.Car);
+
+            if (selectedCar == null)
+            {
+                return Page();
+            }
+
+            // Update the IsRented property of the selected car to true
+            selectedCar.IsRented = true;
 
             _context.Attach(Customer).State = EntityState.Modified;
 
