@@ -1,21 +1,21 @@
 using Data;
 using Data.Model;
 
-/// <summary>
-/// Пронстранство от имена на бизнес логиката
-/// </summary>
+///<summary>
+///Пронстранство от имена на бизнес логиката
+///</summary>
 namespace Business
 {
-    /// <summary>
-    /// Публичен клас на бизнес логиката за коли
-    /// </summary>
+    ///<summary>
+    ///Публичен клас на бизнес логиката за коли
+    ///</summary>
     public class CarBusiness
     {
         private Context context { get; set; }
 
-        /// <summary>
-        /// Връща всички коли от базата данни
-        /// </summary>
+        ///<summary>
+        ///Връща всички коли от базата данни
+        ///</summary>
         public List<Car> GetAll()
         {
             using (context = new Context())
@@ -24,9 +24,11 @@ namespace Business
             }
         }
 
-        /// <summary>
-        /// Връща една кола от базата данни по идентификационно поле 
-        /// </summary>
+        ///<summary>
+        ///Връща една кола от базата данни по идентификационно поле 
+        ///</summary>
+        ///<param name="id">id на колата,която искаме</param>
+        ///<returns>информацията за колата</returns>
         public Car Get(int id)
         {
             using (context = new Context())
@@ -35,9 +37,10 @@ namespace Business
             }
         }
 
-        /// <summary>
-        /// Добавяне на кола към базата данни
-        /// </summary>
+        ///<summary>
+        ///Добавяне на кола към базата данни
+        ///</summary>
+        ///<param name="car">Колата, която ще бъде добавена</param>
         public void Add(Car car)
         {
             using (context = new Context())
@@ -47,9 +50,10 @@ namespace Business
             }
         }
 
-        /// <summary>
-        /// Актуализация на кола към базата данни
-        /// </summary>
+        ///<summary>
+        ///Актуализация на кола към базата данни
+        ///</summary>
+        ///<param name="car">Кола която ще бъде ъпдейтвана</param>
         public void Update(Car car)
         {
             using (context = new Context())
@@ -63,9 +67,10 @@ namespace Business
             }
         }
 
-        /// <summary>
-        /// Изтриване на кола от базата данни
-        /// </summary>
+        ///<summary>
+        ///Изтриване на кола от базата данни
+        ///</summary>
+        ///<param name="id">id на колата</param>
         public void Delete(int id)
         {
             using (context = new Context())
