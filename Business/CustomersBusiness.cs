@@ -1,21 +1,21 @@
 using Data;
 using Data.Model;
 
-/// <summary>
-/// Пронстранство от имена на бизнес логиката
-/// </summary>
+///<summary>
+///Пронстранство от имена на бизнес логиката
+///</summary>
 namespace Business
 {
-    /// <summary>
-    /// Публичен клас на бизнес логиката за клиенти
-    /// </summary>
+    ///<summary>
+    ///Публичен клас на бизнес логиката за клиенти
+    ///</summary>
     public class CustomersBusiness
     {
         private Context context { get; set; }
 
-        /// <summary>
-        /// Връща всички клиенти от базата данни
-        /// </summary>
+        ///<summary>
+        ///Връща всички клиенти от базата данни
+        ///</summary>
         public List<Customer> GetAll()
         {
             using (context = new Context())
@@ -24,9 +24,11 @@ namespace Business
             }
         }
 
-        /// <summary>
-        /// Връща един клиент от базата данни по идентификационно поле 
-        /// </summary>
+        ///<summary>
+        ///Връща един клиент от базата данни по идентификационно поле
+        ///</summary>
+        ///<param name="id">id на клиента, който искаме</param>
+        ///<returns>клиент от базата данни</returns>
         public Customer Get(int id)
         {
             using (context = new Context())
@@ -35,9 +37,10 @@ namespace Business
             }
         }
 
-        /// <summary>
-        /// Добавяне на клиент към базата данни
-        /// </summary>
+        ///<summary>
+        ///Добавяне на клиент към базата данни
+        ///</summary>
+        ///<param name="customer">клиента, който искаме да добавим</param>
         public void Add(Customer customer)
         {
             using (context = new Context())
@@ -47,9 +50,10 @@ namespace Business
             }
         }
 
-        /// <summary>
-        /// Актуализация на клиент към базата данни
-        /// </summary>
+        ///<summary>
+        ///Актуализация на клиент към базата данни
+        ///</summary>
+        ///<param name="customer">клиената, който искаме да ъпдейтнем</param>
         public void Update(Customer customer)
         {
             using (context = new Context())
@@ -63,9 +67,10 @@ namespace Business
             }
         }
 
-        /// <summary>
-        /// Изтриване на клиент от базата данни
-        /// </summary>
+        ///<summary>
+        ///Изтриване на клиент от базата данни
+        ///</summary>
+        ///<param name="id">id на клиента, който искаме да премахнем</param>
         public void Delete(int id)
         {
             using (context = new Context())
