@@ -2,7 +2,7 @@
 
 This project is a Rent A Car dealership management system designed to help the dealership owner to keep track of which cars are available and rented, and to manage the clients who rent them. The project is developed using .NET 6.0 and Visual Studio 2022.
 
-### Features
+## Features
 
 The system includes the following features:
 
@@ -15,14 +15,14 @@ The system includes the following features:
 - Allow the dealership owner to edit the details of existing clients
 - Allow the dealership owner to delete clients from the list
 
-### Technologies
+## Technologies
 
 The following technologies were used in the development of this project:
 
 - .NET 6.0
 - Visual Studio 2022
 - MS SQL Server
-### How to Run the Project
+## How to Run the Project
 
 To run the project, follow these steps:
 
@@ -31,7 +31,7 @@ To run the project, follow these steps:
 3. Build the project
 4. Run the project by pressing F5 or clicking on the green "Run" button in Visual Studio
 
-### How to Use the System
+## How to Use the System
 
 To use the system, follow these steps:
 
@@ -45,6 +45,6 @@ To use the system, follow these steps:
 8. To delete a car or client from the list, click on the "Изтрий" button next to the car or client in the list and confirm the deletion when prompted
 9. To see the details of a car or client, click on the "Детайли" button next to the car
 
-### Conclusion
+## Conclusion
 
 The Rent A Car dealership management system is a simple yet effective solution for managing a dealership's inventory of cars and clients. By using .NET 6.0 and SQL database, the system is easy to set up and use, and provides all the basic functionality needed to manage a Rent A Car dealership.
