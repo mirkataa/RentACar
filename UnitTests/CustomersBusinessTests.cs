@@ -8,17 +8,17 @@ using System.Linq;
 
 namespace UnitTests
 {
-    /// <summary>
-    /// NUnit тестове за методите в CustomersBusiness
-    /// </summary>
+    ///<summary>
+    ///NUnit тестове за методите в CustomersBusiness
+    ///</summary>
     public class CustomersBusinessTests
     {
         private Context context;
         private CustomersBusiness customersBusiness;
 
-        /// <summary>
-        /// Инициализираме контекста и customers business обекта
-        /// </summary>
+        ///<summary>
+        ///Инициализираме контекста и customers business обекта
+        ///</summary>
         [OneTimeSetUp]
         public void Setup()
         {
@@ -26,9 +26,9 @@ namespace UnitTests
             customersBusiness = new CustomersBusiness();
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът GetAll връща всички клиенти от базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът GetAll връща всички клиенти от базата данни
+        ///</summary>
         [Test]
         public void GetAll_ReturnsAllCustomers()
         {
@@ -42,9 +42,9 @@ namespace UnitTests
             CollectionAssert.AreEqual(expectedCustomers, actualCustomers);
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът Get връща правилният клиент от базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът Get връща правилният клиент от базата данни
+        ///</summary>
         [Test]
         public void Get_ReturnsCorrectCustomer()
         {
@@ -79,9 +79,9 @@ namespace UnitTests
             context.SaveChanges();
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът Add добавя клиент в базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът Add добавя клиент в базата данни
+        ///</summary>
         [Test]
         public void Add_AddsNewCustomerToDatabase()
         {
@@ -121,9 +121,9 @@ namespace UnitTests
             context.SaveChanges();
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът Update обновява правилно инфорамацията на даден клиент от базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът Update обновява правилно инфорамацията на даден клиент от базата данни
+        ///</summary>
         [Test]
         public void Update_UpdatesCustomerInDatabase()
         {
@@ -181,9 +181,9 @@ namespace UnitTests
             context.SaveChanges();
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът Delete премахва даден клиент от базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът Delete премахва даден клиент от базата данни
+        ///</summary>
         [Test]
         public void Delete_DeletesCustomerFromDatabase()
         {
@@ -219,9 +219,9 @@ namespace UnitTests
             context.SaveChanges();
         }
 
-        /// <summary>
-        /// Почистваме базата данни
-        /// </summary>
+        ///<summary>
+        ///Почистваме базата данни
+        ///</summary>
         [OneTimeTearDown]
         public void TearDown()
         {

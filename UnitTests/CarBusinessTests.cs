@@ -5,17 +5,17 @@ using Newtonsoft.Json;
 using System;
 namespace UnitTests
 {
-    /// <summary>
-    /// NUnit тестове за методите в CarBusiness
-    /// </summary>
+    ///<summary>
+    ///NUnit тестове за методите в CarBusiness
+    ///</summary>
     public class CarBusinessTests
     {
         private Context context;
         private CarBusiness carBusiness;
 
-        /// <summary>
-        /// Инициализираме контекста и car business обекта
-        /// </summary>
+        ///<summary>
+        ///Инициализираме контекста и car business обекта
+        ///</summary>
         [OneTimeSetUp]
         public void Setup()
         {
@@ -23,9 +23,9 @@ namespace UnitTests
             carBusiness = new CarBusiness();
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът GetAll връща всички коли от базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът GetAll връща всички коли от базата данни
+        ///</summary>
         [Test]
         public void GetAll_ReturnsAllCars()
         {
@@ -39,9 +39,9 @@ namespace UnitTests
             CollectionAssert.AreEqual(expectedCars, actualCars);
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът Get връща правилната кола от базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът Get връща правилната кола от базата данни
+        ///</summary>
         [Test]
         public void Get_ReturnsCorrectCar()
         {
@@ -62,9 +62,9 @@ namespace UnitTests
             context.SaveChanges();
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът Add добавя коли в базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът Add добавя коли в базата данни
+        ///</summary>
         [Test]
         public void Add_AddsNewCarToDatabase()
         {
@@ -86,9 +86,9 @@ namespace UnitTests
             context.SaveChanges();
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът Update обновява правилно инфорамацията на дадена кола от базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът Update обновява правилно инфорамацията на дадена кола от базата данни
+        ///</summary>
         [Test]
         public void Update_UpdatesCarInDatabase()
         {
@@ -119,9 +119,9 @@ namespace UnitTests
             context.SaveChanges();
         }
 
-        /// <summary>
-        /// Тест проверяващ дали методът Delete премахва дадена кола от базата данни
-        /// </summary>
+        ///<summary>
+        ///Тест проверяващ дали методът Delete премахва дадена кола от базата данни
+        ///</summary>
         [Test]
         public void Delete_DeletesCarFromDatabase()
         {
@@ -141,9 +141,9 @@ namespace UnitTests
             context.SaveChanges();
         }
 
-        /// <summary>
-        /// Почистваме базата данни
-        /// </summary>
+        ///<summary>
+        ///Почистваме базата данни
+        ///</summary>
         [OneTimeTearDown]
         public void TearDown()
         {
