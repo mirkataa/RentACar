@@ -4,7 +4,7 @@ This project is a Rent A Car dealership management system designed to help the d
 
 ## Features
 
-The system includes the following features:
+### The system includes the following features:
 
 - Display a list of cars with their respective brands, registration numbers, total driven kilometres, and rental status
 - Allow the dealership owner to add new cars
@@ -17,14 +17,14 @@ The system includes the following features:
 
 ## Technologies
 
-The following technologies were used in the development of this project:
+### The following technologies were used in the development of this project:
 
 - .NET 6.0
 - Visual Studio 2022
 - MS SQL Server
 ## How to Run the Project
 
-To run the project, follow these steps:
+### To run the project, follow these steps:
 
 1. Clone the project to your local machine
 2. Open the solution file (RentACar.sln) in Visual Studio 2022
@@ -33,7 +33,7 @@ To run the project, follow these steps:
 
 ## How to Use the System
 
-To use the system, follow these steps:
+### To use the system, follow these steps:
 
 1. Once the project is running, open a web browser and navigate to the following URL: http://localhost:port/
 2. You will first be taken to the home page - "Начало", from which you can navigate to the other two
