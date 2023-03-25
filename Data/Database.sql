@@ -7,7 +7,7 @@ CREATE TABLE [Cars]
 	[Brand] VARCHAR(50) NOT NULL,
 	[RgNum] VARCHAR(50) NOT NULL, 
 	[Km] INT,
-	[Rented] BIT NOT NULL
+	[IsRented] BIT NOT NULL
 );
 
 CREATE TABLE [Customers] 
