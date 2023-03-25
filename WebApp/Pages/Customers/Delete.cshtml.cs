@@ -67,5 +67,9 @@ namespace WebApp.Pages.Customers
 
             return RedirectToPage("./Index");
         }
+        public async Task<Car> GetCarAsync(int id)
+        {
+            return await _context.Cars.FindAsync(id);
+        }
     }
 }
