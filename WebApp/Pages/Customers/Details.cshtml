@@ -39,7 +39,13 @@
             @Html.DisplayNameFor(model => model.Customer.Car)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Customer.Car)
+            @{
+                // Retrieve the Car object associated with the current customer's Car foreign key
+                var car = await Model.GetCarAsync(Model.Customer.Car);
+
+                // Display the Car Registration number instead of its Id
+                @car.RgNum
+            }
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Customer.From)
