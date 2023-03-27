@@ -1,6 +1,7 @@
 using Business;
 using Data;
 using Data.Model;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System;
 namespace UnitTests
@@ -103,7 +104,7 @@ namespace UnitTests
             carBusiness.Update(expectedCar);
             context.Dispose();
             context = new Context();
-            var actualCar = context.Cars.Find(car.Id);
+            var actualCar = context.Cars.AsNoTracking().SingleOrDefault(a => a.Id == car.Id);
 
             // Assert
             Assert.IsNotNull(actualCar);

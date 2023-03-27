@@ -1,10 +1,12 @@
 ﻿using Business;
 using Data;
 using Data.Model;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using System;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 
 namespace UnitTests
 {
@@ -162,7 +164,7 @@ namespace UnitTests
             customersBusiness.Update(expectedCustomer);
             context.Dispose();
             context = new Context();
-            var actualCustomer = context.Customers.Find(customer.Id);
+            var actualCustomer = context.Customers.AsNoTracking().SingleOrDefault(a => a.Id == customer.Id);
 
             // Assert
             Assert.IsNotNull(actualCustomer);
